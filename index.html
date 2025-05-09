@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aayush Bhattarai</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Fira+Code&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0f0f0f;
+      color: #e0e0e0;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at center, #00ffc310 0%, transparent 70%);
+      transform: translate(-50%, -50%) scale(1);
+      pointer-events: none;
+      z-index: 0;
+      transition: transform 0.2s ease-out;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background-color: #161616;
+      padding: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    nav a {
+      position: relative;
+      font-weight: 600;
+      color: #00ffc3;
+      text-decoration: none;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #00ffc3;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 0.3s ease-out;
+    }
+
+    nav a:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    section {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1, h2 {
+      color: #00ffc3;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 1.5rem;
+      color: #00ffc3;
+      font-weight: bold;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom 0.3s ease;
+    }
+
+    .cta:hover {
+      border-bottom: 2px solid #00ffc3;
+    }
+
+    /* Updated styles for skill bars */
+    .skill-item {
+      margin-bottom: 1.5rem; /* Adds space between skill bars */
+      text-align: center;
+    }
+
+    .skill-bar {
+      background: #222;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 1rem; /* Adds margin below each progress bar */
+    }
+
+    .skill-fill {
+      height: 10px;
+      background: #00ffc3;
+    }
+
+    /* Logo styles */
+    .skill-logo {
+      margin-top: 0.5rem;
+      max-width: 50px; /* Controls logo size */
+      height: auto;
+    }
+
+    /* Section for 'Currently Exploring' */
+    section.exploring {
+      background: #161616;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    blockquote {
+      font-style: italic;
+      opacity: 0.7;
+      border-left: 3px solid #00ffc3;
+      padding-left: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+  </nav>
+
+  <section>
+    <h1>About Me</h1>
+    <p>Hi, My name is Aayush Bhattarai, from Nepal, currently studying in Germany. I’m a 20-year-old passionate about 3D graphics, computers, and all things tech. I love exploring new technologies, learning by doing, and challenging myself with creative and technical problems. Whether it's building visuals or solving complex tasks, I'm always eager to grow and experiment.</p>
+    <a href="projects.html" class="cta">Head to my Projects →</a>
+  </section>
+
+  <section>
+    <h2>Skills & Tools</h2>
+    <div class="skill-item">
+      <strong>3D Environment</strong>
+      <div class="skill-bar">
+        <div class="skill-fill" id="3d-progress" style="width: 0%;"></div>
+      </div>
+      <!-- Logo below the progress bar -->
+      <img src="blender-logo.png" alt="Blender Logo" class="skill-logo" />
+    </div>
+
+    <div class="skill-item">
+      <strong>Tech Stack</strong>
+      <div class="skill-bar">
+        <div class="skill-fill" id="tech-progress" style="width: 0%;"></div>
+      </div>
+      <!-- Logo below the progress bar -->
+      <img src="godot-logo.png" alt="Godot Logo" class="skill-logo" />
+    </div>
+
+    <div class="skill-item">
+      <strong>Design</strong>
+      <div class="skill-bar">
+        <div class="skill-fill" id="design-progress" style="width: 0%;"></div>
+      </div>
+      <!-- Logo below the progress bar -->
+      <img src="photoshop-logo.png" alt="Adobe Photoshop Logo" class="skill-logo" />
+    </div>
+  </section>
+
+  <!-- Section for Currently Exploring -->
+  <section class="exploring">
+    <h2>Currently Exploring</h2>
+    <p>Experimenting with real-time rendering, procedural generation, and shader development. Always curious to try new tools and break things to learn how they work.</p>
+  </section>
+
+  <!-- Inspirational Quote -->
+  <section>
+    <blockquote>“The best way to predict the future is to invent it.” – Alan Kay</blockquote>
+  </section>
+
+  <script>
+    // Function to fill progress bars as page loads
+    window.onload = () => {
+      let progress = 0;
+
+      // Set the intervals for the progress bars (these are the percentages to fill)
+      const progressIntervals = [
+        { id: '3d-progress', targetWidth: 85 },
+        { id: 'tech-progress', targetWidth: 65 },
+        { id: 'design-progress', targetWidth: 60 },
+      ];
+
+      progressIntervals.forEach(({ id, targetWidth }) => {
+        let currentWidth = 0;
+        const progressBar = document.getElementById(id);
+
+        // Animate the filling of the progress bar
+        const interval = setInterval(() => {
+          if (currentWidth < targetWidth) {
+            currentWidth++;
+            progressBar.style.width = `${currentWidth}%`;
+          } else {
+            clearInterval(interval);
+          }
+        }, 10); // Adjust the speed of filling
+      });
+    };
+  </script>
+</body>
+</html>

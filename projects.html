@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects – Aayush Bhattarai</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0f0f0f;
+      color: #e0e0e0;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background-color: #161616;
+      padding: 1rem;
+    }
+    nav a {
+      color: #00ffc3;
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #00ffc3;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 0.3s ease-out;
+    }
+    nav a:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+    h1 {
+      color: #00ffc3;
+    }
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .project-gallery img,
+    .project-gallery video {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-gallery img:hover,
+    .project-gallery video:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 20px rgba(0, 255, 195, 0.15);
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #00ffc3;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+  </nav>
+
+  <section>
+    <h1>My Projects</h1>
+    <p>Here's a collection of things I've built, rendered, experimented with or prototyped.</p>
+
+    <h2>Images</h2>
+    <div class="project-gallery">
+      <img src="C:\Users\baayu\aayushhbhattarai.github.io\projects\000.png" alt="Project 1" />
+      <img src="C:\Users\baayu\aayushhbhattarai.github.io\projects\biohazard.png" alt="Project 2" />
+      <img src="C:\Users\baayu\aayushhbhattarai.github.io\projects\CLIFF1.png" alt="Project 3" />
+      <img src="C:\Users\baayu\aayushhbhattarai.github.io\projects\comeback.png" alt="Project 3" />
+      <img src="C:\Users\baayu\aayushhbhattarai.github.io\projects\DASHAIN.png" alt="Project 3" />
+      <img src="C:\Users\baayu\aayushhbhattarai.github.io\projects\deer4.png" alt="Project 3" />
+      <img src="C:\Users\baayu\aayushhbhattarai.github.io\projects\DUNKRIK3.png" alt="Project 3" />
+      <img src="C:\Users\baayu\aayushhbhattarai.github.io\projects\ETERNAL-PEACE.png" alt="Project 3" />
+      <img src="C:\Users\baayu\aayushhbhattarai.github.io\projects\GOAT.png" alt="Project 3" />
+      <img src="C:\Users\baayu\aayushhbhattarai.github.io\projects\heart.png" alt="Project 3" />
+      <img src="C:\Users\baayu\aayushhbhattarai.github.io\projects\idkbro_0000.png" alt="Project 3" />
+      <img src="C:\Users\baayu\aayushhbhattarai.github.io\projects\INSOMNIA.png" alt="Project 3" />
+      <img src="C:\Users\baayu\aayushhbhattarai.github.io\projects\kanye.png" alt="Project 3" />
+      <img src="C:\Users\baayu\aayushhbhattarai.github.io\projects\KNOWLEDGE1.png" alt="Project 3" />
+      <img src="C:\Users\baayu\aayushhbhattarai.github.io\projects\mountain_wolf_by_aayushbhattarai_de9mq56.png" alt="Project 3" />
+      <img src="C:\Users\baayu\aayushhbhattarai.github.io\projects\NEPAL.png" alt="Project 3" />
+      <img src="C:\Users\baayu\aayushhbhattarai.github.io\projects\PETSLOVER.png" alt="Project 3" />
+      <img src="C:\Users\baayu\aayushhbhattarai.github.io\projects\red_panda_by_aayushbhattarai_deavkkn.png" alt="Project 3" />
+      <img src="C:\Users\baayu\aayushhbhattarai.github.io\projects\RETRO.png" />
+      <img src="C:\Users\baayu\aayushhbhattarai.github.io\projects\RINGD.png" alt="Project 3" />
+      <img src="C:\Users\baayu\aayushhbhattarai.github.io\projects\spiderman_poster_recreation_by_aayushbhattarai_de9mqdm.png" alt="Project 3" />
+      <img src="C:\Users\baayu\aayushhbhattarai.github.io\projects\STARWARS.png" alt="Project 3" />
+      <img src="C:\Users\baayu\aayushhbhattarai.github.io\projects\sunflower.png" alt="Project 3" />
+      <img src="C:\Users\baayu\aayushhbhattarai.github.io\projects\trmple.png" alt="Project 3" />
+      <img src="C:\Users\baayu\aayushhbhattarai.github.io\projects\VIKING.png" alt="Project 3" />
+    </div>
+
+    <h2>Videos</h2>
+    <div class="project-gallery">
+      <video src="C:\Users\baayu\aayushhbhattarai.github.io\projects\My Video1.mp4" controls></video>
+      <video src="C:\Users\baayu\aayushhbhattarai.github.io\projects\My Video2.mp4" controls></video>
+      <video src="C:\Users\baayu\aayushhbhattarai.github.io\projects\My Video7.mp4" controls></video>
+      <video src="C:\Users\baayu\aayushhbhattarai.github.io\projects\My Video15.mp4" controls></video>
+      <video src="C:\Users\baayu\aayushhbhattarai.github.io\projects\My Video16.mp4" controls></video>
+      <video src="C:\Users\baayu\aayushhbhattarai.github.io\projects\My Video29.mp4" controls></video>
+      <video src="C:\Users\baayu\aayushhbhattarai.github.io\projects\out.mp4" controls></video>
+      
+    </div>
+  </section>
+</body>
+</html>
