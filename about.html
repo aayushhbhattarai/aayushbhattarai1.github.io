@@ -1,1 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me - Aayush Bhattarai</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fdfdfd;
+      color: #1a1a1a;
+      margin: 0;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.25rem;
+    }
+    .tagline {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+    section {
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+    }
+    .skill {
+      margin-bottom: 1rem;
+    }
+    .skill-name {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+    .progress {
+      background: #e4e4e4;
+      height: 8px;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .progress-bar {
+      height: 8px;
+      background: #00c6a2;
+      width: 0;
+      animation: fill 2s ease forwards;
+    }
+    @keyframes fill {
+      to {
+        width: var(--width);
+      }
+    }
+    a {
+      color: #00c6a2;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .contact p {
+      margin: 0.5rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Aayush Bhattarai</h1>
+    <p class="tagline">3D Artist & Tech Explorer from Nepal, studying in Germany</p>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I'm Aayush, passionate about 3D graphics, game engines, and all things tech. Originally from Nepal and currently studying at Universität des Saarlandes, I enjoy exploring creative and technical boundaries — from real-time rendering to shader development and procedural systems. I thrive in hands-on learning environments and love solving both visual and logical problems through code and design.
+      </p>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <p><strong>Preparatory Course for BSc Computer Science</strong><br>Universität des Saarlandes, Germany (2025 – Present)</p>
+      <p><strong>Higher Secondary (+2)</strong><br>Trinity International SS & College, Nepal (2021 – 2023)</p>
+      <p><strong>German Language Courses (B1 & B2.1)</strong><br>Goethe-Zentrum Kathmandu</p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+
+      <div class="skill">
+        <div class="skill-name">Blender (3D Environment)</div>
+        <div class="progress"><div class="progress-bar" style="--width: 85%"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">Godot (Game Engine)</div>
+        <div class="progress"><div class="progress-bar" style="--width: 50%"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">Photoshop (Design)</div>
+        <div class="progress"><div class="progress-bar" style="--width: 70%"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">Python & General Programming</div>
+        <div class="progress"><div class="progress-bar" style="--width: 60%"></div></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Languages</h2>
+      <p><strong>English:</strong> C1 Listening, Reading, Writing | B2 Speaking</p>
+      <p><strong>German:</strong> B1 (in progress toward B2)</p>
+      <p><strong>Nepali:</strong> Native</p>
+    </section>
+
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:baayush061@gmail.com">baayush061@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/aayushbhattarai1/" target="_blank">aayushbhattarai1</a></p>
+    </section>
+  </div>
+</body>
+</html>
 
