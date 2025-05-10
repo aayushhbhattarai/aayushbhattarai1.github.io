@@ -69,25 +69,6 @@
       transform-origin: bottom left;
     }
 
-    .nav-right {
-      margin-left: auto; /* Pushes the contact to the right side */
-      font-size: 1.2rem;
-      font-weight: 500;
-    }
-
-    .contact-icon {
-      display: inline-block;
-      width: 1.5rem;
-      height: 1.5rem;
-      background-color: #00ffc3;
-      border-radius: 50%;
-      text-align: center;
-      line-height: 1.5rem;
-      color: #161616;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-
     section {
       max-width: 800px;
       margin: auto;
@@ -209,9 +190,6 @@
   <nav>
     <a href="index.html">Home</a>
     <a href="projects.html">Projects</a>
-    <div class="nav-right">
-      <div class="contact-icon" onclick="showEmail()">📧</div>
-    </div>
   </nav>
 
   <section>
@@ -285,11 +263,6 @@
         }, 10);
       });
     };
-
-    function showEmail() {
-      const emailDiv = document.getElementById('email');
-      emailDiv.style.display = 'block';  // Show email
-    }
   </script>
 </body>
 </html>
