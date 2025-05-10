@@ -69,6 +69,25 @@
       transform-origin: bottom left;
     }
 
+    .nav-right {
+      margin-left: auto; /* Pushes the contact to the right side */
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+
+    .contact-icon {
+      display: inline-block;
+      width: 1.5rem;
+      height: 1.5rem;
+      background-color: #00ffc3;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 1.5rem;
+      color: #161616;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
     section {
       max-width: 800px;
       margin: auto;
@@ -95,6 +114,20 @@
       border-bottom: 2px solid #00ffc3;
     }
 
+    .cta-no-blue {
+      color: #ffffff;
+      background-color: #222;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-no-blue:hover {
+      background-color: #444;
+    }
+
     /* Updated styles for skill bars with fun effects */
     .skill-item {
       margin-bottom: 2rem;
@@ -117,13 +150,13 @@
 
     .skill-fill {
       height: 100%;
-      background: linear-gradient(90deg, #00ffc3 0%, #0078ff 100%); /* Fun gradient */
+      background: linear-gradient(90deg, #ffffff 0%, #d4af37 100%); /* White to light gold gradient */
       position: absolute;
       top: 0;
       left: 0;
       width: 0%; /* Will be animated */
       border-radius: 8px 0 0 8px; /* Rounded corners on the filled portion */
-      box-shadow: 0 0 10px rgba(0, 255, 195, 0.5); /* Light glowing effect */
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Light glowing effect */
     }
 
     .skill-logo {
@@ -176,13 +209,15 @@
   <nav>
     <a href="index.html">Home</a>
     <a href="projects.html">Projects</a>
-    <a href="javascript:void(0)" class="contact-button" onclick="showEmail()">Contact</a>
+    <div class="nav-right">
+      <div class="contact-icon" onclick="showEmail()">📧</div>
+    </div>
   </nav>
 
   <section>
     <h1>About Me</h1>
     <p>Hi, My name is Aayush Bhattarai, from Nepal, currently studying in Germany. I’m a 20-year-old passionate about 3D graphics, computers, and all things tech. I love exploring new technologies, learning by doing, and challenging myself with creative and technical problems. Whether it's building visuals or solving complex tasks, I'm always eager to grow and experiment.</p>
-    <a href="projects.html" class="cta">Head to my Projects →</a>
+    <a href="projects.html" class="cta-no-blue">Head to my Projects →</a>
   </section>
 
   <section>
