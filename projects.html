@@ -3,28 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects – Aayush Bhattarai</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <title>Aayush Bhattarai</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Fira+Code&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       background-color: #0f0f0f;
       color: #e0e0e0;
+      overflow-x: hidden;
     }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at center, #00ffc310 0%, transparent 70%);
+      transform: translate(-50%, -50%) scale(1);
+      pointer-events: none;
+      z-index: 0;
+      transition: transform 0.2s ease-out;
+    }
+
     nav {
       display: flex;
       justify-content: center;
       gap: 2rem;
       background-color: #161616;
-      padding: 1rem;
+      padding: 1.5rem;
+      position: relative;
+      z-index: 1;
     }
+
     nav a {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
       color: #00ffc3;
       text-decoration: none;
-      font-weight: 600;
-      position: relative;
+      transition: color 0.3s ease;
+      font-size: 1.5rem;
     }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
     nav a::after {
       content: '';
       position: absolute;
@@ -37,38 +63,103 @@
       transform-origin: bottom right;
       transition: transform 0.3s ease-out;
     }
+
     nav a:hover::after {
       transform: scaleX(1);
       transform-origin: bottom left;
     }
+
     section {
-      max-width: 1000px;
+      max-width: 800px;
       margin: auto;
       padding: 2rem;
+      position: relative;
+      z-index: 1;
     }
-    h1 {
+
+    h1, h2 {
       color: #00ffc3;
     }
-    .project-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
+
+    .cta {
+      display: inline-block;
+      margin-top: 1.5rem;
+      color: ##ffffff;
+      font-weight: bold;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom 0.3s ease;
     }
-    .project-gallery img,
-    .project-gallery video {
-      width: 100%;
+
+    .cta:hover {
+      border-bottom: 2px solid #00ffc3;
+    }
+
+    .cta-no-blue {
+      color: #ffffff;
+      background-color: #222;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-no-blue:hover {
+      background-color: #444;
+    }
+
+    /* Updated styles for skill bars with fun effects */
+    .skill-item {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .skill-item strong {
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .skill-bar {
+      background: #222;
       border-radius: 8px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 15px; /* Increased height for a bolder effect */
+      overflow: hidden;
+      margin-bottom: 1rem;
+      position: relative;
     }
-    .project-gallery img:hover,
-    .project-gallery video:hover {
-      transform: scale(1.03);
-      box-shadow: 0 4px 20px rgba(0, 255, 195, 0.15);
+
+    .skill-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #ffffff 0%, #d4af37 100%); /* White to light gold gradient */
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%; /* Will be animated */
+      border-radius: 8px 0 0 8px; /* Rounded corners on the filled portion */
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Light glowing effect */
     }
-    h2 {
+
+    .skill-logo {
+      margin-top: 0.5rem;
+      max-width: 50px;
+      height: auto;
+    }
+
+    /* Section for 'Currently Exploring' */
+    section.exploring {
+      background: #161616;
+      border-radius: 12px;
+      padding: 1.5rem;
       margin-top: 2rem;
-      color: #00ffc3;
+    }
+
+    blockquote {
+      font-style: italic;
+      opacity: 0.7;
+      border-left: 3px solid #00ffc3;
+      padding-left: 1rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
@@ -79,47 +170,72 @@
   </nav>
 
   <section>
-    <h1>My Projects</h1>
-    <p>Here's a collection of things I've built, rendered, experimented with or prototyped.</p>
+    <h1>About Me</h1>
+    <p>Hi, My name is Aayush Bhattarai, from Nepal, currently studying in Germany. I’m a 20-year-old passionate about 3D graphics, computers, and all things tech. I love exploring new technologies, learning by doing, and challenging myself with creative and technical problems. Whether it's building visuals or solving complex tasks, I'm always eager to grow and experiment.</p>
+    <a href="projects.html" class="cta-no-blue">Head to my Projects →</a>
+  </section>
 
-    <h2>Images</h2>
-    <div class="project-gallery">
-      <img src="projects/000.png" alt="Project 1" />
-      <img src="projects\biohazard.png" alt="Project 2" />
-      <img src="projects\CLIFF1.png" alt="Project 3" />
-      <img src="projects\comeback.png" alt="Project 3" />
-      <img src="projects\DASHAIN.png" alt="Project 3" />
-      <img src="projects\deer4.png" alt="Project 3" />
-      <img src="projects\DUNKRIK3.png" alt="Project 3" />
-      <img src="projects\ETERNAL-PEACE.png" alt="Project 3" />
-      <img src="projects\GOAT.png" alt="Project 3" />
-      <img src="projects\heart.png" alt="Project 3" />
-      <img src="projects\idkbro_0000.png" alt="Project 3" />
-      <img src="projects\INSOMNIA.png" alt="Project 3" />
-      <img src="projects\kanye.png" alt="Project 3" />
-      <img src="projects\KNOWLEDGE1.png" alt="Project 3" />
-      <img src="projects\mountain_wolf_by_aayushbhattarai_de9mq56.png" />
-      <img src="projects\NEPAL.png" alt="Project 3" />
-      <img src="projects\PETSLOVER.png" alt="Project 3" />
-      <img src="projects\red_panda_by_aayushbhattarai_deavkkn.png" />
-      <img src="projects\RETRO.png" />
-      <img src="projects\RINGD.png" alt="Project 3" />
-      <img src="projects\spiderman_poster_recreation_by_aayushbhattarai_de9mqdm.png" alt="Project 3" />
-      <img src="projects\STARWARS.png" alt="Project 3" />
-      <img src="projects\sunflower.png" alt="Project 3" />
-      <img src="projects\trmple.png" alt="Project 3" />
-      <img src="projects\VIKING.png" alt="Project 3" />
+  <section>
+    <h2>Skills & Tools</h2>
+    <div class="skill-item">
+      <strong>3D Environment</strong>
+      <div class="skill-bar">
+        <div class="skill-fill" id="3d-progress" style="width: 85%;"></div>
+      </div>
+      <img src="projects/Blender_logo_no_text.svg.png" alt="Blender Logo" class="skill-logo" />
     </div>
 
-    <h2>Videos</h2>
-    <div class="project-gallery">
-      <video src="projects\My Video1.mp4" controls></video>
-      <video src="projects\My Video2.mp4" controls></video>
-      <video src="projects\My Video15.mp4" controls></video>
-      <video src="projects\My Video29.mp4" controls></video>
-      <video src="projects\out.mp4" controls></video>
-      
+    <div class="skill-item">
+      <strong>Tech Stack</strong>
+      <div class="skill-bar">
+        <div class="skill-fill" id="tech-progress" style="width: 50%;"></div>
+      </div>
+      <img src="projects/Godot.png" alt="Godot Logo" class="skill-logo" />
+    </div>
+
+    <div class="skill-item">
+      <strong>Design</strong>
+      <div class="skill-bar">
+        <div class="skill-fill" id="design-progress" style="width: 70%;"></div>
+      </div>
+      <img src="projects/ps.svg" alt="Adobe Photoshop Logo" class="skill-logo" />
     </div>
   </section>
+
+  <section class="exploring">
+    <h2>Currently Exploring</h2>
+    <p>Experimenting with real-time rendering, procedural generation, and shader development. Always curious to try new tools and break things to learn how they work.</p>
+  </section>
+
+  <section>
+    <blockquote>“The best way to predict the future is to invent it.” – Alan Kay</blockquote>
+  </section>
+
+  <script>
+    // Function to fill progress bars as page loads
+    window.onload = () => {
+      let progress = 0;
+
+      const progressIntervals = [
+        { id: '3d-progress', targetWidth: 85 },
+        { id: 'tech-progress', targetWidth: 50 },
+        { id: 'design-progress', targetWidth: 70 },
+      ];
+
+      progressIntervals.forEach(({ id, targetWidth }) => {
+        let currentWidth = 0;
+        const progressBar = document.getElementById(id);
+
+        const interval = setInterval(() => {
+          if (currentWidth < targetWidth) {
+            currentWidth++;
+            progressBar.style.width = `${currentWidth}%`;
+          } else {
+            clearInterval(interval);
+          }
+        }, 10);
+      });
+    };
+  </script>
 </body>
 </html>
