@@ -70,6 +70,11 @@
       transform-origin: bottom left;
     }
 
+    nav a.active::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
     section {
       max-width: 1000px;
       margin: auto;
@@ -119,7 +124,7 @@
 </head>
 <body>
   <nav>
-    <a href="index.html">Home</a>
+    <a href="index.html" class="active">Home</a>
     <a href="projects.html">Projects</a>
   </nav>
 
@@ -169,30 +174,13 @@
   </section>
 
   <script>
-    // Function to fill progress bars as page loads
-    window.onload = () => {
-      let progress = 0;
-
-      const progressIntervals = [
-        { id: '3d-progress', targetWidth: 85 },
-        { id: 'tech-progress', targetWidth: 50 },
-        { id: 'design-progress', targetWidth: 70 },
-      ];
-
-      progressIntervals.forEach(({ id, targetWidth }) => {
-        let currentWidth = 0;
-        const progressBar = document.getElementById(id);
-
-        const interval = setInterval(() => {
-          if (currentWidth < targetWidth) {
-            currentWidth++;
-            progressBar.style.width = `${currentWidth}%`;
-          } else {
-            clearInterval(interval);
-          }
-        }, 10);
-      });
-    };
+    // Set the 'Projects' link to be active and highlighted
+    document.querySelectorAll('nav a').forEach((link) => {
+      link.classList.remove('active');
+      if (window.location.href.indexOf(link.href) !== -1) {
+        link.classList.add('active');
+      }
+    });
   </script>
 </body>
 </html>
