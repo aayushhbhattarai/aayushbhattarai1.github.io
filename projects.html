@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aayush Bhattarai</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Fira+Code&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+  <title>Projects – Aayush Bhattarai</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -45,6 +45,7 @@
       text-decoration: none;
       transition: color 0.3s ease;
       font-size: 1.5rem;
+      position: relative;
     }
 
     nav a:hover {
@@ -70,7 +71,7 @@
     }
 
     section {
-      max-width: 800px;
+      max-width: 1000px;
       margin: auto;
       padding: 2rem;
       position: relative;
@@ -81,18 +82,24 @@
       color: #00ffc3;
     }
 
-    .cta {
-      display: inline-block;
-      margin-top: 1.5rem;
-      color: ##ffffff;
-      font-weight: bold;
-      text-decoration: none;
-      border-bottom: 2px solid transparent;
-      transition: border-bottom 0.3s ease;
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
     }
 
-    .cta:hover {
-      border-bottom: 2px solid #00ffc3;
+    .project-gallery img,
+    .project-gallery video {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-gallery img:hover,
+    .project-gallery video:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 20px rgba(0, 255, 195, 0.15);
     }
 
     .cta-no-blue {
@@ -108,59 +115,6 @@
     .cta-no-blue:hover {
       background-color: #444;
     }
-
-    /* Updated styles for skill bars with fun effects */
-    .skill-item {
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-
-    .skill-item strong {
-      display: block;
-      margin-bottom: 1rem;
-    }
-
-    .skill-bar {
-      background: #222;
-      border-radius: 8px;
-      height: 15px; /* Increased height for a bolder effect */
-      overflow: hidden;
-      margin-bottom: 1rem;
-      position: relative;
-    }
-
-    .skill-fill {
-      height: 100%;
-      background: linear-gradient(90deg, #ffffff 0%, #d4af37 100%); /* White to light gold gradient */
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 0%; /* Will be animated */
-      border-radius: 8px 0 0 8px; /* Rounded corners on the filled portion */
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Light glowing effect */
-    }
-
-    .skill-logo {
-      margin-top: 0.5rem;
-      max-width: 50px;
-      height: auto;
-    }
-
-    /* Section for 'Currently Exploring' */
-    section.exploring {
-      background: #161616;
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    blockquote {
-      font-style: italic;
-      opacity: 0.7;
-      border-left: 3px solid #00ffc3;
-      padding-left: 1rem;
-      margin-top: 2rem;
-    }
   </style>
 </head>
 <body>
@@ -170,45 +124,48 @@
   </nav>
 
   <section>
-    <h1>About Me</h1>
-    <p>Hi, My name is Aayush Bhattarai, from Nepal, currently studying in Germany. I’m a 20-year-old passionate about 3D graphics, computers, and all things tech. I love exploring new technologies, learning by doing, and challenging myself with creative and technical problems. Whether it's building visuals or solving complex tasks, I'm always eager to grow and experiment.</p>
-    <a href="projects.html" class="cta-no-blue">Head to my Projects →</a>
-  </section>
+    <h1>My Projects</h1>
+    <p>Here's a collection of things I've built, rendered, experimented with, or prototyped.</p>
 
-  <section>
-    <h2>Skills & Tools</h2>
-    <div class="skill-item">
-      <strong>3D Environment</strong>
-      <div class="skill-bar">
-        <div class="skill-fill" id="3d-progress" style="width: 85%;"></div>
-      </div>
-      <img src="projects/Blender_logo_no_text.svg.png" alt="Blender Logo" class="skill-logo" />
+    <h2>Images</h2>
+    <div class="project-gallery">
+      <img src="projects/000.png" alt="Project 1" />
+      <img src="projects/biohazard.png" alt="Project 2" />
+      <img src="projects/CLIFF1.png" alt="Project 3" />
+      <img src="projects/comeback.png" alt="Project 4" />
+      <img src="projects/DASHAIN.png" alt="Project 5" />
+      <img src="projects/deer4.png" alt="Project 6" />
+      <img src="projects/DUNKRIK3.png" alt="Project 7" />
+      <img src="projects/ETERNAL-PEACE.png" alt="Project 8" />
+      <img src="projects/GOAT.png" alt="Project 9" />
+      <img src="projects/heart.png" alt="Project 10" />
+      <img src="projects/idkbro_0000.png" alt="Project 11" />
+      <img src="projects/INSOMNIA.png" alt="Project 12" />
+      <img src="projects/kanye.png" alt="Project 13" />
+      <img src="projects/KNOWLEDGE1.png" alt="Project 14" />
+      <img src="projects/mountain_wolf_by_aayushbhattarai_de9mq56.png" alt="Project 15" />
+      <img src="projects/NEPAL.png" alt="Project 16" />
+      <img src="projects/PETSLOVER.png" alt="Project 17" />
+      <img src="projects/red_panda_by_aayushbhattarai_deavkkn.png" alt="Project 18" />
+      <img src="projects/RETRO.png" alt="Project 19" />
+      <img src="projects/RINGD.png" alt="Project 20" />
+      <img src="projects/spiderman_poster_recreation_by_aayushbhattarai_de9mqdm.png" alt="Project 21" />
+      <img src="projects/STARWARS.png" alt="Project 22" />
+      <img src="projects/sunflower.png" alt="Project 23" />
+      <img src="projects/trmple.png" alt="Project 24" />
+      <img src="projects/VIKING.png" alt="Project 25" />
     </div>
 
-    <div class="skill-item">
-      <strong>Tech Stack</strong>
-      <div class="skill-bar">
-        <div class="skill-fill" id="tech-progress" style="width: 50%;"></div>
-      </div>
-      <img src="projects/Godot.png" alt="Godot Logo" class="skill-logo" />
+    <h2>Videos</h2>
+    <div class="project-gallery">
+      <video src="projects/My Video1.mp4" controls></video>
+      <video src="projects/My Video2.mp4" controls></video>
+      <video src="projects/My Video15.mp4" controls></video>
+      <video src="projects/My Video29.mp4" controls></video>
+      <video src="projects/out.mp4" controls></video>
     </div>
 
-    <div class="skill-item">
-      <strong>Design</strong>
-      <div class="skill-bar">
-        <div class="skill-fill" id="design-progress" style="width: 70%;"></div>
-      </div>
-      <img src="projects/ps.svg" alt="Adobe Photoshop Logo" class="skill-logo" />
-    </div>
-  </section>
-
-  <section class="exploring">
-    <h2>Currently Exploring</h2>
-    <p>Experimenting with real-time rendering, procedural generation, and shader development. Always curious to try new tools and break things to learn how they work.</p>
-  </section>
-
-  <section>
-    <blockquote>“The best way to predict the future is to invent it.” – Alan Kay</blockquote>
+    <a href="index.html" class="cta-no-blue">Back to Home →</a>
   </section>
 
   <script>
