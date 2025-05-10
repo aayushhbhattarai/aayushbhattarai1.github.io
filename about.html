@@ -54,6 +54,7 @@
 
     nav a:hover {
       color: #ffffff;
+      text-decoration: none;
     }
 
     nav a::after {
@@ -74,10 +75,14 @@
       transform-origin: bottom left;
     }
 
-    section {
-      max-width: 1000px;
+    body a:not(nav a):hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 900px;
       margin: auto;
-      padding: 6rem 2rem 2rem 2rem; /* Matches the old .container top padding */
+      padding: 6rem 2rem 2rem 2rem; /* Top padding to avoid nav overlap */
     }
 
     h1 {
@@ -92,11 +97,16 @@
       margin-bottom: 2rem;
     }
 
+    section {
+      margin-bottom: 2.5rem;
+    }
+
     h2 {
       font-size: 1.5rem;
       padding-bottom: 0.3rem;
       margin-bottom: 1rem;
       color: #00ffc3;
+      border-bottom: none;
     }
 
     .skill {
@@ -133,10 +143,6 @@
       text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
-
     .contact p {
       margin: 0.5rem 0;
     }
@@ -149,56 +155,56 @@
     <a href="about.html">About Me</a>
   </nav>
 
-  <section>
+  <div class="container">
     <h1>Aayush Bhattarai</h1>
     <p class="tagline">3D Artist & Tech Explorer from Nepal, studying in Germany</p>
-  </section>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I'm Aayush, passionate about 3D graphics, game engines, and all things tech. Originally from Nepal and currently studying at Universität des Saarlandes, I enjoy exploring creative and technical boundaries — from real-time rendering to shader development and procedural systems. I thrive in hands-on learning environments and love solving both visual and logical problems through code and design.
-    </p>
-  </section>
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I'm Aayush, passionate about 3D graphics, game engines, and all things tech. Originally from Nepal and currently studying at Universität des Saarlandes, I enjoy exploring creative and technical boundaries — from real-time rendering to shader development and procedural systems. I thrive in hands-on learning environments and love solving both visual and logical problems through code and design.
+      </p>
+    </section>
 
-  <section>
-    <h2>Education</h2>
-    <p><strong>Preparatory Course for BSc Computer Science</strong><br>Universität des Saarlandes, Germany (2025 – Present)</p>
-    <p><strong>Higher Secondary (+2)</strong><br>Trinity International SS & College, Nepal (2021 – 2023)</p>
-    <p><strong>German Language Courses (B1 & B2.1)</strong><br>Goethe-Zentrum Kathmandu</p>
-  </section>
+    <section>
+      <h2>Education</h2>
+      <p><strong>Preparatory Course for BSc Computer Science</strong><br>Universität des Saarlandes, Germany (2025 – Present)</p>
+      <p><strong>Higher Secondary (+2)</strong><br>Trinity International SS & College, Nepal (2021 – 2023)</p>
+      <p><strong>German Language Courses (B1 & B2.1)</strong><br>Goethe-Zentrum Kathmandu</p>
+    </section>
 
-  <section>
-    <h2>Skills</h2>
-    <div class="skill">
-      <div class="skill-name">Blender (3D Environment)</div>
-      <div class="progress"><div class="progress-bar" style="--width: 85%"></div></div>
-    </div>
-    <div class="skill">
-      <div class="skill-name">Godot (Game Engine)</div>
-      <div class="progress"><div class="progress-bar" style="--width: 50%"></div></div>
-    </div>
-    <div class="skill">
-      <div class="skill-name">Photoshop (Design)</div>
-      <div class="progress"><div class="progress-bar" style="--width: 70%"></div></div>
-    </div>
-    <div class="skill">
-      <div class="skill-name">Python & General Programming</div>
-      <div class="progress"><div class="progress-bar" style="--width: 60%"></div></div>
-    </div>
-  </section>
+    <section>
+      <h2>Skills</h2>
+      <div class="skill">
+        <div class="skill-name">Blender (3D Environment)</div>
+        <div class="progress"><div class="progress-bar" style="--width: 85%"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">Godot (Game Engine)</div>
+        <div class="progress"><div class="progress-bar" style="--width: 50%"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">Photoshop (Design)</div>
+        <div class="progress"><div class="progress-bar" style="--width: 70%"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">Python & General Programming</div>
+        <div class="progress"><div class="progress-bar" style="--width: 60%"></div></div>
+      </div>
+    </section>
 
-  <section>
-    <h2>Languages</h2>
-    <p><strong>English:</strong> C1</p>
-    <p><strong>German:</strong> B2 (in progress toward C1)</p>
-    <p><strong>Nepali:</strong> Native</p>
-  </section>
+    <section>
+      <h2>Languages</h2>
+      <p><strong>English:</strong> C1</p>
+      <p><strong>German:</strong> B2 (in progress toward C1)</p>
+      <p><strong>Nepali:</strong> Native</p>
+    </section>
 
-  <section class="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:baayush061@gmail.com">baayush061@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/aayushbhattarai1/" target="_blank">aayushbhattarai1</a></p>
-  </section>
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:baayush061@gmail.com">baayush061@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/aayushbhattarai1/" target="_blank">aayushbhattarai1</a></p>
+    </section>
+  </div>
 </body>
 </html>
