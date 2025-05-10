@@ -43,7 +43,7 @@
       color: #ffffff;
     }
 
-    /* Underline animation effect */
+    /* Underline animation effect for navigation links only */
     nav a::after {
       content: '';
       position: absolute;
@@ -84,11 +84,12 @@
       margin-bottom: 2.5rem;
     }
 
+    /* Remove underline or border from h2 section titles */
     h2 {
       font-size: 1.5rem;
       padding-bottom: 0.3rem;
       margin-bottom: 1rem;
-      border-bottom: none; /* Remove the border here to avoid double underline */
+      border-bottom: none; /* Ensures no border or underline effect on section headers */
     }
 
     .skill {
@@ -188,7 +189,7 @@
     <!-- Languages Section -->
     <section>
       <h2>Languages</h2>
-      <p><strong>English:</strong> C1 </p>
+      <p><strong>English:</strong> C1</p>
       <p><strong>German:</strong> B2 (in progress toward C1)</p>
       <p><strong>Nepali:</strong> Native</p>
     </section>
