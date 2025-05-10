@@ -38,6 +38,7 @@
       z-index: 1;
     }
 
+    /* Styling for navigation links */
     nav a {
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
@@ -45,12 +46,14 @@
       text-decoration: none;
       transition: color 0.3s ease;
       font-size: 1.5rem;
+      position: relative;
     }
 
     nav a:hover {
       color: #ffffff;
     }
 
+    /* Underline effect specifically for the navigation links */
     nav a::after {
       content: '';
       position: absolute;
@@ -69,6 +72,7 @@
       transform-origin: bottom left;
     }
 
+    /* Section styling for the rest of the page */
     section {
       max-width: 800px;
       margin: auto;
@@ -109,7 +113,7 @@
       background-color: #444;
     }
 
-    /* Updated styles for skill bars with fun effects */
+    /* Skill bar styles with fun effects */
     .skill-item {
       margin-bottom: 2rem;
       text-align: center;
@@ -161,29 +165,6 @@
       padding-left: 1rem;
       margin-top: 2rem;
     }
-
-    .contact-button {
-      display: inline-block;
-      margin-top: 1.5rem;
-      background-color: #00ffc3;
-      color: #161616;
-      padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-
-    .contact-button:hover {
-      background-color: #00b89f;
-    }
-
-    .email {
-      display: none;
-      font-size: 1.2rem;
-      color: #ffffff;
-      margin-top: 1rem;
-    }
   </style>
 </head>
 <body>
@@ -233,10 +214,6 @@
   <section>
     <blockquote>“The best way to predict the future is to invent it.” – Alan Kay</blockquote>
   </section>
-
-  <div class="email" id="email">
-    <p>Email: <a href="mailto:aayushhh69@gmail.com" style="color: #00ffc3;">aayushhh69@gmail.com</a></p>
-  </div>
 
   <script>
     // Function to fill progress bars as page loads
