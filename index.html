@@ -31,12 +31,18 @@
 
     nav {
       display: flex;
-      justify-content: center;
-      gap: 2rem;
+      align-items: center;
+      justify-content: space-between;
       background-color: #161616;
-      padding: 1.5rem;
+      padding: 1.5rem 2rem;
       position: relative;
       z-index: 1;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      margin: 0 auto;
     }
 
     nav a {
@@ -180,7 +186,6 @@
     .bmc-icon-link {
       display: flex;
       align-items: center;
-      margin-right: auto;
     }
 
     .bmc-icon {
@@ -196,9 +201,11 @@
     <a href="https://buymeacoffee.com/aayushbhattarai?new=1" target="_blank" class="bmc-icon-link" aria-label="Buy me a coffee">
       <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" class="bmc-icon">
     </a>
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="about.html">About Me</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About Me</a>
+    </div>
   </nav>
 
   <section>
