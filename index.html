@@ -66,17 +66,16 @@
       transition: transform 0.3s ease-out;
     }
 
+    nav a:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
     .small-img {
       width: 90%;
       max-width: 400px;
       margin: 0 auto;
       display: block;
-    }
-
-
-    nav a:hover::after {
-      transform: scaleX(1);
-      transform-origin: bottom left;
     }
 
     section {
@@ -176,10 +175,27 @@
     .contact a:hover {
       text-decoration: underline;
     }
+
+    /* Buy Me a Coffee icon styles */
+    .bmc-icon-link {
+      display: flex;
+      align-items: center;
+      margin-right: auto;
+    }
+
+    .bmc-icon {
+      height: 32px;
+      width: auto;
+      border-radius: 6px;
+      box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+    }
   </style>
 </head>
 <body>
   <nav>
+    <a href="https://buymeacoffee.com/aayushbhattarai?new=1" target="_blank" class="bmc-icon-link" aria-label="Buy me a coffee">
+      <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" class="bmc-icon">
+    </a>
     <a href="index.html">Home</a>
     <a href="projects.html">Projects</a>
     <a href="about.html">About Me</a>
@@ -205,8 +221,8 @@
       </div>
 
       <div class="project-item"> 
-      <img src="projects/STARWARS.png" alt="Particle simulation project" class="small-img" />
-      <p>Poster Design in Photoshop for the movie Star Wars</p>
+        <img src="projects/STARWARS.png" alt="Particle simulation project" class="small-img" />
+        <p>Poster Design in Photoshop for the movie Star Wars</p>
       </div>
     </div>
 
